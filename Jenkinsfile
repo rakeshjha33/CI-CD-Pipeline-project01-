@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "YOUR_DOCKERHUB_USERNAME/python-todo"
+        IMAGE_NAME = "rakeshjha33/python-todo"
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
 
@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'main',
-                url: 'YOUR_GITHUB_REPO_URL'
+                url: 'https://github.com/rakeshjha33/CI-CD-Pipeline-project01-.git'
             }
         }
 
